@@ -1,0 +1,355 @@
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2003-2007 David J. Grant <davidgrant-at-gmail.com> http://www.davidgrant.ca
+% (c) 2008 Nathaniel Johnston <nathaniel@nathanieljohnston.com> http://www.nathanieljohnston.com
+%
+%This work is licensed under the Creative Commons Attribution-Noncommercial-Share Alike 2.5 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/2.5/ or send a letter to Creative Commons, 543 Howard Street, 5th Floor, San Francisco, California, 94105, USA.
+
+\documentclass[letterpaper,10pt]{article}
+\newlength{\outerbordwidth}
+\raggedbottom
+\raggedright
+\usepackage[svgnames]{xcolor}
+\usepackage{framed}
+\usepackage{tocloft}
+\usepackage{lipsum}
+\usepackage{array}
+
+\pagenumbering{arabic}
+%-----------------------------------------------------------
+%Edit these values as you see fit
+
+\setlength{\outerbordwidth}{3pt}  % Width of border outside of title bars
+\definecolor{shadecolor}{gray}{0.75}  % Outer background color of title bars (0 = black, 1 = white)
+\definecolor{shadecolorB}{gray}{0.93}  % Inner background color of title bars
+
+
+%-----------------------------------------------------------
+%Margin setup
+
+\setlength{\evensidemargin}{-0.25in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\oddsidemargin}{-0.25in}
+\setlength{\paperheight}{11in}
+\setlength{\paperwidth}{8.5in}
+\setlength{\tabcolsep}{0in}
+\setlength{\textheight}{9.5in}
+\setlength{\textwidth}{7in}
+\setlength{\topmargin}{-0.3in}
+\setlength{\topskip}{0in}
+\setlength{\voffset}{0.1in}
+
+
+%-----------------------------------------------------------
+%Custom commands
+
+\newcommand\textbox[1]{%
+  \parbox{.333\textwidth}{#1}%
+}
+
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{\vspace{8pt}
+  \parbox{\textwidth}{\setlength{\FrameSep}{\outerbordwidth}
+    \begin{shaded}
+\setlength{\fboxsep}{0pt}\framebox[\textwidth][l]{\setlength{\fboxsep}{4pt}\fcolorbox{shadecolorB}{shadecolorB}{\textbf{\sffamily{\mbox{~}\makebox[6.762in][l]{\large #1} \vphantom{p\^{E}}}}}}
+    \end{shaded}
+  }\vspace{-5pt}
+}
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+\end{tabular*}\vspace{-6pt}}
+%-----------------------------------------------------------
+
+
+\begin{document}
+
+\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+\textbf{\Large Ross Jacobucci} & \textbf{Curriculum Vitae} \\
+3620 South McClintock Ave., SGM 501  & jacobucc@usc.edu \\
+Los Angeles, California 90089 & 952-201-9347 \\
+\end{tabular*}
+\\
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Education}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% problem w/ \ressubheading
+%
+\begin{itemize}
+\item
+	\ressubheading{University of Southern California (USC)}  {Los Angeles, California}{Ph.D. Psychology} {Expected 2017}
+	\begin{itemize}
+		\resitem{Area: Quantitative Methods}
+	\end{itemize}
+\item
+	\ressubheading{University of Northern Iowa (UNI)}{Cedar Falls, Iowa}{M.A. Psychology}{2011-2013}
+	\begin{itemize}
+		\resitem{Individualized Study: Quantitative Emphasis}
+	\end{itemize}
+
+\item
+	\ressubheading{Luther College}{Decorah, Iowa}{B.A. Psychology}{Graduated 2010}
+	\begin{itemize}
+		\resitem{Thesis: The Effect of Mental Imagery on Performance in Golf.}
+		\resitem{Cum Laude}
+	\end{itemize}
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Awards/Honors}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \begin{center}
+  \parbox{6.5in}{\textbf{Intercollegiate Academics Fund Travel Award}, UNI, Fall 2012}
+   \parbox{6.5in}{Award allocated to promote and support the presentation of research at an academic conference.}
+\parbox{6.5in}{Amount: \$650}
+ \end{center}
+\begin{center}
+  \parbox{6.5in}{\textbf{Graduate Student Opportunity Fund For Travel}, UNI, Fall 2012}
+   \parbox{6.5in}{Award to support travel for graduate students presenting at an academic conference.}
+  \parbox{6.5in}{Amount: \$250}
+ \end{center}
+\begin{center}
+  \parbox{6.5in}{\textbf{College of Social and Behavioral Sciences Graduate Research Award}, UNI, Fall 2012}
+   \parbox{6.5in}{Award allocated for the purchase of expenses related to thesis research.}
+  \parbox{6.5in}{Amount: \$500}
+ \end{center}
+ \begin{center}
+  \parbox{6.5in}{\textbf{Graduate College Tuition Scholarship}, UNI,  Fall 2012}
+  \parbox{6.5in}{Scholarship based on academic performance.}
+  \end{center}
+  \begin{center}
+  \parbox{6.5in}{\textbf{Academic All-American}, Golf, 2009, 2010}
+  \parbox{6.5in}{An award given out by the Golf Coaches Association of America based on academic and athletic performance.}
+  \end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Publications \& Presentations}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize} 
+\setlength{\topsep}{0pt}%
+\setlength{\leftmargin}{0.1in}%
+\setlength{\listparindent}{-0.1in}%
+\setlength{\itemindent}{-0.2in}%
+\setlength{\parsep}{\parskip}%
+
+\item[]{\textbf{\large{Published Papers}}}
+%
+\item[]Skaar, N. R., Christ, T. J., \& \textbf{Jacobucci, R.} (In Press). \emph{Measuring Adolescent Prosocial and Health Risk Behavior in Schools: Initial Development of a Screening Measure.} School Mental Health.
+%
+%\item[]{\textbf{\large{Manuscripts in Preparation}}}
+%
+%\item[]McArdle, J. J, \& \textbf{Jacobucci, R.} (In Preparation). \emph{Confirmatory Testing of the Factors of Cognition as Measured in Project TALENT.} Multivariate Behavior Research.
+%
+\item[]{\textbf{\large{Presentations}}}
+\item[]\textbf{Jacobucci, R.}(2014, March). \emph{Graphing in R.} Talk given as a part of the Graduate Consultation and Computer Center Lecture Series at USC.
+\item[]\textbf{Jacobucci, R.}(2014, March). \emph{Item Factor Analysis.} Talk given as a part of the Graduate Consultation and Computer Center Lecture Series at USC.
+%
+\item[]{\textbf{\large{Poster Presentations}}}
+\item[]\textbf{Jacobucci, R.}, Williams, J. E., \& Thiruselvam, I. (2013, January). \emph{A confirmatory factor analysis of the short form for the IPIP-NEO five-factor model personality scale.} Poster session presented at the Society for Personality and Social Psychology, New Orleans, Louisiana.
+\item[]\textbf{Jacobucci, R.}, Brownfield, C., \& Williams, J. E. (2012, December). \emph{Intelligence as a factor in criminal offender risk assessment.} Poster session presented at the International Society for Intelligence Research, San Antonio, Texas.
+\item []\textbf{Jacobucci, R.}, Williams, J. E., \& Thiruselvam, I. (2012, March). \emph{Convergent validity of two short form measures of the five factor model of personality.} Poster session presented at the Iowa Psychological Association Spring Conference, Ames, Iowa.
+ 
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Consultation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize} 
+\setlength{\topsep}{0pt}%
+\setlength{\leftmargin}{0.1in}
+
+\item \textbf{iTracking Research, Inc.} {Summer 2013-Fall 2013}\\
+Assisted in the methodological development of the analysis of Parkinson's Disease through the use of eyetracking. Developed scripts in R to organize the data for analysis as well as for the use of machine learning algorithms to predict outcomes. 
+%
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Research Experience}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize} 
+\setlength{\topsep}{0pt}%
+\setlength{\leftmargin}{0.1in}
+%
+%\item[]{\textbf{\large{Individual Experience}}}
+%
+\item \textbf{Psychometric Expert} {Summer 2013-Present}
+Supervisor: Dr. John J. McArdle, USC\\ 
+Worked closely with Dr. Jiu-Chiuan Chen and Dr. Yong Cen through the Preventative Medicine department at USC in the modeling and prediction of cognitive decline in two large longitudinal datasets. Responsibilities include using structural equation modeling (SEM) to construct models to predict Alzheimer's disease, item response theory and factor analysis to evaluate the factor structure and precision of multiple cognitive measures, and Monte Carlo simulation to conduct multiple power analyses for grant preparation. I have also built on this work in conducting first and second-order latent growth models, mixture models, among other multivariate techniques. 
+%
+\item \textbf{Research Assistant} {Fall 2013-Present }\\
+Supervisor: Dr. John J. McArdle, USC\\ 
+In working with data from Project TALET (PT), I have conducted both exploratory and confirmatory factor analyses in R and MPlus to determine the factor structure of 60+ cognitive variables. Using these models, in addition to 2000+ other variables collected in the initial and follow up samples, I have used the semtree package to determine relationship between these covariates and factor model parameters. Because of the complexity of models and size of sample, I have utilized the Center for High-Performance Computing and Communication's (HPCC) supercomputer. Finally, I have used multiple item response theory(IRT) models on item level data from 20 cognitive ability scales to determine the best model 
+
+%
+\item \textbf{Principal Investigator} {Summer 2012-Spring 2013, \emph{Personality and Cognitive Ability in Civilly Committed Sexual Offenders}}\\
+Supervisor: Dr. John E. Williams, UNI\\
+Conducting group administration of cognitive ability and personality measures at the Civil Commitment Unit for Sexual Offenders in Cherokee, Iowa. Responsibilities included conducting a literature review, designing an original study, coordinating with administrators at the civil commitment unit, administration of ability and self-report measures to patients, entering, cleaning, and analyzing data in SPSS.
+%
+\item \textbf{Principal Investigator} {Summer 2012-Fall 2012, \emph{Personality, Cognitive Functioning, Adaptive Behavior, and Criminogenic Needs}}\\
+Supervisor: Dr. John E. Williams, UNI\\
+Conducting archival data collection at the Iowa Medical and Classification Center in 	Coralville, Iowa. Examine cognitive ability, academic achievement, personality, risk		 assessment, and conviction charges. 
+%
+\item \textbf{Principal Investigator} {Fall 2011-Summer 2012, \emph{The Role of Grit, Self-Control, and Conscientiousness in Academic Achievement}}\\
+Supervisor: Dr. John E. Williams, UNI\\
+Conducted group administration of self-report measures of personality and academic achievement in a college sample. Responsibilities included the administration of self-report measures to high school and college populations, entering, cleaning, and analyzing data in SPSS, and writing up in APA style manuscript. 
+%
+%\item[]{\textbf{\large{Lab Experience}}}
+%
+
+\item \textbf{Research Assistant} {Fall 2012-Summer 2013 }\\
+Supervisor: Mike Whitson, iTracking Research, Inc.\\
+Assist in research design, methodologies, and conducting statistical analyes in R and SPSS. Assembled scripts for analyses, cleaned datafiles, constructed and ran SEM models in AMOS, composed graphs of analyses, and other duties as needed.     
+%
+\item \textbf{Research Assistant} {Fall 2012-Summer 2013 }\\
+Supervisor: Dr. Andrew R. Gilpin, UNI\\
+Assist in conducting background research and conceptualizing a Monte Carlo simulation study that examines the effectiveness of basing sample size planning on the results of pilot studies.  
+%
+\item \textbf{Research Assistant} {Spring 2012-Spring 2013 }\\
+Supervisor: Dr. Nicole Skaar, UNI\\
+Design and run confirmatory factor analyses in AMOS and R on a measure of risk behavior. Conduct IRT analysis of Iowa Youth Survey data. 
+%
+\item \textbf{Lab Coordinator} Summer 2012-Fall 2012, Psychometrics and Personality Lab\\
+Supervisor: Dr. John E. Williams, UNI\\
+Responsibilities include coordinating lab related meetings and activities. Additionally, conduct meetings that teach research methods related to the current lab research. 
+%
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Teaching Experience}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize} 
+\setlength{\topsep}{0pt}%
+\setlength{\leftmargin}{0.1in}%
+
+%%%%%%%%%% Short Version %%%%%%%%%%%%%%
+\item \textbf{Teaching Assistant} \\
+History \& Systems, Spring 2013 (undergraduate: Dr. Andrew R. Gilpin, UNI)\\
+Psychology of Music, Spring 2013 (undergraduate: Dr. Carolyn Hildebrandt, UNI)\\
+Advanced Graduate Statistics, Fall 2012 (graduate: Dr. Andrew R. Gilpin, UNI)\\
+Cognitive \& Intellectual Assessment, Fall 2012 (graduate: Dr. John E. Williams, UNI)\\
+Honor's Introducton to Psychology, Fall 2012 (undergraduate: Dr. John E. Williams, UNI)\\
+Introduction to Psych Statistics, Spring 2012 (undergraduate: Dr. Andrew R. Gilpin, UNI)\\
+Memory \& Language, Fall 2011 (undergraduate: Dr. Jack Yates, UNI)\\
+%
+%%%%%%%%% Long Version %%%%%%%%%%%%%%%%
+%\item \textbf{Teaching Assistant} {Spring 2013, History \& Systems}\\
+%Supervisor: Dr. Andrew R. Gilpin, UNI\\
+%Responsibilities include grading coursework, holding student lab meetings, and aiding students %throughout the course.
+%
+%\item \textbf{Teaching Assistant} {Spring 2013, Psychology of Music}\\
+%Supervisor: Dr. Carolyn Hildebrandt, UNI\\
+%Responsibilities include grading coursework, holding office hours, and aiding students %throughout the course.
+%
+%\item \textbf{Teaching Assistant} {Fall 2012, Advanced Graduate Statistics}\\
+%Supervisor: Dr. Andrew R. Gilpin, UNI\\
+%Responsibilities include grading coursework, holding student lab meetings, and aiding students %throughout the course.
+%
+%\item \textbf{Teaching Assistant} {Fall 2012, Cognitive \& Intellectual Assessment}\\
+%Supervisor: Dr. John E. Williams, UNI\\
+%Responsibilities include holding student lab meetings, creating test questions, grading %coursework, scheduling student assessments, and aiding students throughout the course.
+%
+%\item \textbf{Teaching Assistant} {Fall 2012, Honor's Introduction to Psychology}\\
+%Supervisor: Dr. John E. Williams, UNI\\
+%Responsibilities include assisting students with questions about the material and grading exams.
+%
+%\item \textbf{Teaching Assistant} {Spring 2012, Introduction to Psych Statistics}\\
+%Supervisor: Dr. Andrew R. Gilpin, UNI\\
+%Responsibilities included attending lectures, grading coursework, conducting study 	sessions, %and aiding students throughout the course.
+%
+%\item \textbf{Teaching Assistant} {Fall 2011, Memory \& Language}\\
+%Supervisor: Dr. Jack Yates, UNI\\
+%Responsibilities included attending lectures, grading coursework, conducting study 	sessions, %and aiding students throughout the course.
+%
+\item \textbf{Guest Lecturer} \\
+Advanced Graduate Statistics (graduate: Dr. Andrew R. Gilpin), factor analysis.\\
+Cognitive \& Intellectual Assessment (graduate: Dr. John E. Williams), theories of intelligence and test bias.\\
+Honor's Introducton to Psychology (undergraduate: Dr. John E. Williams), intelligence.\\
+%
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Affiliations}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\setlength{\itemsep}{-2pt}%
+
+%\item{\large{International Society for Intelligence Research}}
+\item{\large{Association for Psychological Science}}
+%\item{\large{APA Division 5. Evaluation, Measurement, Stats}}
+%\item{\large{APA Division 15. Educational Psychology}}
+\item{\large{Psychometric Society}}
+
+	
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\resheading{Web Based Programming}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{itemize} 
+%\setlength{\topsep}{0pt}%
+%\setlength{\leftmargin}{0.1in}%
+
+%\item \textbf{Midwestern Q-Sort Program} {Summer 2012-Fall 2013}\\
+%Update and redesign the program for the annual MMPI interpretation competition. Used HTML5, %Javascript, and CSS3 to design an interactive and scorable program to use as training for %graduate level clinical psychology students. 
+%
+%\item \textbf{UNI Assessment Clinic} {Summer 2012}\\
+%Updated the style, content, and design of the website. Used HTML5 and CSS3 to make 	the %website easier to navigate and understand while enhancing stylistic components.\\
+%
+%\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Skills}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{itemize} 
+\setlength{\topsep}{0pt}%
+\setlength{\leftmargin}{0.1in}%
+%
+\item \textbf{Statistical Software}\\
+R, SPSS, Amos, Mplus, S+, Winsteps, flexMIRT, SAS
+%
+\item \textbf{Programming and Markup Languages}\\
+\LaTeX, Javascript, HTML5, CSS3, PHP 5
+%
+\item \textbf{Assessment Administration through Coursework} {Fall 2011-Spring 2012}\\
+Trained on the following measures: Minnesota Multiphasic Personality Inventory–	-Second Edition, Revised Form, and Adolescent Form; Personality Assessment Inventory–-Adult and Adolescent Forms; Structured Clinical Interview for DSM Disorders; Structured Clinical Interview for DSM Personality Disorders; Weschler’s Adult Intelligence Scale–-Fourth Edition; and Woodcock Johnson Achievement Test–-Third Edition.
+%
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{References}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \begin{center}
+  \parbox{6.5in}{\textbf{John J. McArdle}, Ph.D., University of Southern California}
+  \parbox{6.5in}{Professor of Psychology and Gerontology}
+  \parbox{6.5in}{jmcardle@usc.edu}
+  \parbox{6.5in}{Phone: (213) 740-2276 }
+  \end{center} 
+ \begin{center}
+  \parbox{6.5in}{\textbf{Andrew Gilpin}, Ph.D., University of Northern Iowa}
+  \parbox{6.5in}{Professor of Psychology}
+  \parbox{6.5in}{andy.gilpin@uni.edu}
+  \parbox{6.5in}{Phone: (319) 273-6104}
+  \end{center}
+\begin{center}
+  \parbox{6.5in}{\textbf{Mike Whitson},  iTracking Research, Inc.}
+  \parbox{6.5in}{Vice President}
+  \parbox{6.5in}{mike@itrackingresearch.com}
+  \parbox{6.5in}{Phone: (319) 239-9008}
+  \end{center}
+\begin{center}
+  \parbox{6.5in}{\textbf{Nicole Skaar}, Ph.D., University of Northern Iowa}
+  \parbox{6.5in}{Assistant Professor of School Psychology}
+  \parbox{6.5in}{nicole.skaar@uni.edu}
+  \parbox{6.5in}{Phone: 319-273-7649}
+  \end{center}
+
+
+
+\end{document}
