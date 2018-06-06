@@ -1,0 +1,234 @@
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2003-2007 David J. Grant <davidgrant-at-gmail.com> http://www.davidgrant.ca
+% (c) 2008 Nathaniel Johnston <nathaniel@nathanieljohnston.com> http://www.nathanieljohnston.com
+%
+%This work is licensed under the Creative Commons Attribution-Noncommercial-Share Alike 2.5 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/2.5/ or send a letter to Creative Commons, 543 Howard Street, 5th Floor, San Francisco, California, 94105, USA.
+
+\documentclass[letterpaper,10pt]{article}
+\newlength{\outerbordwidth}
+\raggedbottom
+\raggedright
+\usepackage[svgnames]{xcolor}
+\usepackage{framed}
+\usepackage{comment}
+\usepackage{tocloft}
+\usepackage{lipsum}
+\usepackage{array}
+
+\pagenumbering{arabic}
+%-----------------------------------------------------------
+%Edit these values as you see fit
+
+\setlength{\outerbordwidth}{3pt}  % Width of border outside of title bars
+\definecolor{shadecolor}{gray}{0.75}  % Outer background color of title bars (0 = black, 1 = white)
+\definecolor{shadecolorB}{gray}{0.93}  % Inner background color of title bars
+
+
+%-----------------------------------------------------------
+%Margin setup
+
+\setlength{\evensidemargin}{-0.25in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\oddsidemargin}{-0.25in}
+\setlength{\paperheight}{11in}
+\setlength{\paperwidth}{8.5in}
+\setlength{\tabcolsep}{0in}
+\setlength{\textheight}{9.5in}
+\setlength{\textwidth}{7in}
+\setlength{\topmargin}{-0.3in}
+\setlength{\topskip}{0in}
+\setlength{\voffset}{0.1in}
+
+
+%-----------------------------------------------------------
+%Custom commands
+
+\newcommand\textbox[1]{%
+  \parbox{.333\textwidth}{#1}%
+}
+
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{\vspace{8pt}
+  \parbox{\textwidth}{\setlength{\FrameSep}{\outerbordwidth}
+    \begin{shaded}
+\setlength{\fboxsep}{0pt}\framebox[\textwidth][l]{\setlength{\fboxsep}{4pt}\fcolorbox{shadecolorB}{shadecolorB}{\textbf{\sffamily{\mbox{~}\makebox[6.762in][l]{\large #1} \vphantom{p\^{E}}}}}}
+    \end{shaded}
+  }\vspace{-5pt}
+}
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+\end{tabular*}\vspace{-6pt}}
+%-----------------------------------------------------------
+
+
+\begin{document}
+
+\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+\textbf{\Large Ross Jacobucci} & \textbf{Curriculum Vitae} \\
+118 Haggar Hall  & rjacobuc@nd.edu \\
+Notre Dame, Indiana 46556 & rjacobucci.com \\
+574-631-2589 & Skype: ross.jacobucci
+
+\end{tabular*}
+\\
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Professional History \& Education}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% problem w/ \ressubheading
+\begin{itemize}
+	\item
+	\ressubheading{Assistant Professor of Psychology}{2017 - Current} {University of Notre Dame}  {Notre Dame, Indiana}
+%
+\item
+	\ressubheading{Ph.D. Psychology} {August 2017}{University of Southern California (USC)}  {Los Angeles, California}
+	\begin{itemize}
+		\resitem{Area: Quantitative Methods}
+		\resitem{Dissertation: Evaluating the Stability of Decision Tree Algorithms.}
+	\end{itemize}
+\item
+\ressubheading{M.A. Psychology} {December 2015}{University of Southern California (USC)}  {Los Angeles, California}
+\begin{itemize}
+	\resitem{Area: Quantitative Methods}
+	\resitem{Thesis: Regularized Structural Equation Modeling.}
+\end{itemize}
+\item
+	\ressubheading{M.A. Psychology}{2011-2013}{University of Northern Iowa (UNI)}{Cedar Falls, Iowa}
+	\begin{itemize}
+		\resitem{Individualized Study: Quantitative Emphasis}
+	\end{itemize}
+
+\item
+	\ressubheading{B.A. Psychology}{June 2010}{Luther College}{Decorah, Iowa}
+	\begin{itemize}
+		\resitem{Thesis: The Effect of Mental Imagery on Performance in Golf.}
+	%	\resitem{Cum Laude}
+	\end{itemize}
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Research Funding}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{itemize} 
+	\setlength{\topsep}{0pt}%
+	\setlength{\leftmargin}{0.1in}%
+	\setlength{\listparindent}{-0.1in}%
+	\setlength{\itemindent}{-0.2in}%
+	\setlength{\parsep}{\parskip}%
+	
+%	\item {\textbf{\large{Pending}}}
+	
+%		\begin{center}
+%			\parbox{6.5in}{{NIH RFA-MH-18-400 \hspace{.5cm} Ross Jacobucci (PI)}  \hspace{5.5cm} Under Review}
+%			\parbox{6.5in}{Addressing Suicide Research Gaps: Aggregating and Mining Existing Data Sets for Secondary Analyses}
+%			\parbox{6.5in}{\textit{ Integrative Data Mining in the Prediction of the Pathway to Suicide.}}
+%			\parbox{6.5in}{Total Cost: \$540,750}
+%		\end{center}
+
+	\item{\textbf{\large{Ongoing}}}
+	
+	\begin{center}
+		\parbox{6.5in}{{Evan Kleiman (PI)}  \hspace{11cm} Funded}
+		\parbox{6.5in}{Sponsored: Military Suicide Research Consortium Common Data Elements. }
+		\parbox{6.5in}{\textit{Enhancing Identification of Suicide Risk among Military Service Members and Veterans: A Machine Learning Approach to Suicidality.}}
+		\parbox{6.5in}{Role: Consultant}
+	\end{center}
+	
+	
+	\begin{center}
+		\parbox{6.5in}{{Taylor Burke (PI)}  \hspace{10cm} 10/16/17-10/16/18}
+		\parbox{6.5in}{Sponsored:  James Morgan Fund for New Directions in the Analysis of Complex Interactions.}
+		\parbox{6.5in}{\textit{Using Exploratory Data Mining to Enhance Prediction of Suicide Risk among Youth in Medical Care Settings}}
+		\parbox{6.5in}{Role: Consultant}
+	\end{center}
+	
+	
+	\item{\textbf{\large{Completed}}}
+	
+	\begin{center}
+		\parbox{6.5in}{{T32 AG000037-38  \hspace{1cm} Crimmins (PI)}   \hspace{6.6cm} 01/01/15-07/31/17}
+		\parbox{6.5in}{Ruth L. Kirschstein National Research Service Award}
+		\parbox{6.5in}{\textit{Predoctoral trainee on the Multidisciplinary Research Training in Gerontology Grant at USC. }}
+		\parbox{6.5in}{Role: Predoctoral Trainee}
+	\end{center}
+	%
+	
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Books}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize} 
+	\setlength{\topsep}{0pt}%
+	\setlength{\leftmargin}{0.1in}%
+	\setlength{\listparindent}{-0.1in}%
+	\setlength{\itemindent}{-0.2in}%
+	\setlength{\parsep}{\parskip}%
+	
+	\item[]\textbf{Jacobucci, R.} \& Grimm, K. J. (under contract). \emph{Exploratory data mining for social and behavioral scientists.} New York, NY: Guilford.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Publications}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize} 
+\setlength{\topsep}{0pt}%
+\setlength{\leftmargin}{0.1in}%
+\setlength{\listparindent}{-0.1in}%
+\setlength{\itemindent}{-0.2in}%
+\setlength{\parsep}{\parskip}%
+
+\item {\textbf{\large{Publications}}}
+%
+\item[]Stegmann, G., \textbf{Jacobucci, R.}, Serang, S., \& Grimm, K. J. (in press). Recursive partitioning with nonlinear change trajectories. \emph{Multivariate Behavioral Research}.
+%
+\item[] Usami, S., \textbf{Jacobucci, R.}, \& Hayes, T. (in press). The performance of latent growth curve model based structural equation model trees to uncover population heterogeneity in growth trajectories. \emph{Computational Statistics}.
+%
+\item[]Burke, T. A., \textbf{Jacobucci, R.}, Ammerman, B. A.,, Piccirillo, M., McCloskey M., \& Alloy, L. B. (in press). Identifying the relative importance of non-suicidal self-injury features in predicting suicidal ideation and behavior using exploratory data mining. \emph{Psychiatry Research}.
+%
+\item[]Ammerman, B. A., \textbf{Jacobucci, R.}, \& McCloskey, M. S. (in press). Using exploratory data mining to identify important predictors of non-suicidal self-injury frequency. \emph{Psychology of Violence.}
+%
+\item[]Ammerman, B. A., \textbf{Jacobucci, R.}, Kleiman, E. M., Uyeji, L., \& McCloskey, M. S. (in press). The relationship between nonsuicidal self-injury age of onset and severity of self-harm. \emph{Suicide and Life Threatening Behavior.}
+%
+\item[] \textbf{Jacobucci, R.}, Grimm, K. J. (2018). Comparison of frequentist and Bayesian regularization in structural equation modeling. \emph{Structural Equation Modeling, 25}, 639-649.
+%
+\item[]Stegmann, G., \textbf{Jacobucci, R.}, Harring, J., \& Grimm, K. J. (2018). Nonlinear mixed-effects modeling programs in R. \emph{Structural Equation Modeling, 25}, 160-165.
+%
+\item[]Serang, S., \textbf{Jacobucci, R.}, Brimhall, K. C., \& Grimm, K. J. (2017). Exploratory mediation analysis via regularization. \emph{Structural Equation Modeling, 24}. 733-744.
+%
+\item[]\textbf{Jacobucci, R.}, Grimm, K. J., \& McArdle, J. J. (2017). A comparison of methods for uncovering sample heterogeneity: Structural equation model trees and finite mixture models. \emph{Structural Equation Modeling, 24}. 270-282.
+%
+\item[]Grimm, K. J., \textbf{Jacobucci, R.}, McArdle, J. J. (January, 2017). Big data methods and psychological science. \emph{Psycholgocical Science Agenda}.
+%
+\item[]\textbf{Jacobucci, R.}, Grimm, K. J., \& McArdle, J. J. (2016). Regularized structural equation modeling, \emph{Structural Equation Modeling, 23}, 555-566. doi:10.1080/10705511.2016.1154793. PMCID: 4937830
+%
+\item[]Ammerman, B. A., \textbf{Jacobucci, R.,}, Kleiman, E. M., Muehlenkamp, J. J., \& McCloskey, M. S. (2016). Development and validation of empirically derived frequency criteria for NSSI disorder using exploratory data mining, \emph{Psychological Assessment.}
+%
+\item[]\textbf{Jacobucci, R.,} \& McArdle, J. J. (2015). Abstract: Regularized structural equation modeling, \emph{Multivariate Behavioral Research 50}, 736-736. doi:10.1080/00273171.2015.1121125. 
+%
+\item[]Hayes, T., Usami, S., \textbf{Jacobucci, R.,} \& McArdle, J. J. (2015). Using classification and regression trees (CART) and random forests to analyze attrition in longitudinal data: Results from two simulation studies, \emph{Psychology and Aging, 30}, 911-929. doi:10.1037/pag0000046. PMCID: 4743660
+%
+\item[]Skaar, N. R., Christ, T. J., \& \textbf{Jacobucci, R.} (2014). Measuring adolescent prosocial and health risk behavior in schools: Initial development of a screening measure. \emph{School Mental Health, 6}, 137-149. doi:10.1007/s12310-014-9123-y
+%
+\vspace{3mm}
+%
+%
+%
+\item {\textbf{\large{Chapters}}}
+\item[] \textbf{Jacobucci, R.} \& Grimm, K. J. (accepted). Regularized estimation of multivariate latent change score models. Advances in Longitudinal Models for Multivariate Psychology.
+%
+\item[] Grimm, K. J. \& \textbf{Jacobucci, R.} (accepted). Individually varying time metrics in latent change score models. Advances in Longitudinal Models for Multivariate Psychology.
+%
+%
+\vspace{3mm}
+
+\end{itemize}
+
+\end{document}
