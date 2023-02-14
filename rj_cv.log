@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.12.7)  9 FEB 2023 08:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.12.7)  14 FEB 2023 07:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -185,10 +185,10 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 Excluding 'comment' comment. [2] [3] [4] [5] [6] [7] [8] [9] [10] (./rj_cv.aux)
  ) 
 Here is how much of TeX's memory you used:
- 2764 strings out of 478268
- 46628 string characters out of 5846347
- 450641 words of memory out of 5000000
- 20983 multiletter control sequences out of 15000+600000
+ 2765 strings out of 478268
+ 46640 string characters out of 5846347
+ 450644 words of memory out of 5000000
+ 20984 multiletter control sequences out of 15000+600000
  471450 words of font info for 35 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,10n,77p,773b,240s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -201,7 +201,7 @@ r/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/l
 ocal/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/
 local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/l
 ocal/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on rj_cv.pdf (10 pages, 149657 bytes).
+Output written on rj_cv.pdf (10 pages, 149690 bytes).
 PDF statistics:
  78 PDF objects out of 1000 (max. 8388607)
  49 compressed objects within 1 object stream
