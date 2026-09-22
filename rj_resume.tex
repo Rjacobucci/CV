@@ -1,0 +1,100 @@
+% Ross Jacobucci --- two-page industry resume
+% Single column, no tables, standard headings: parses cleanly in applicant-tracking systems.
+% Compile with pdflatex.
+
+\documentclass[10pt,letterpaper]{article}
+\usepackage[margin=0.6in,top=0.5in,bottom=0.5in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{charter}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\raggedright
+\hyphenpenalty=10000
+\interlinepenalty=10000  % keep each bullet on one page
+\setlist[itemize]{leftmargin=1.1em, itemsep=1.5pt, parsep=0pt, topsep=2pt, label=\textbullet}
+
+\titleformat{\section}{\normalsize\bfseries\MakeUppercase}{}{0em}{}[\vspace{-7pt}\rule{\textwidth}{0.5pt}]
+\titlespacing*{\section}{0pt}{8pt}{4pt}
+
+\newcommand{\org}[2]{\textbf{#1} \hfill #2\par}
+\newcommand{\role}[2]{\textit{#1} \hfill \textit{#2}\par\vspace{1pt}}
+\newcommand{\pub}[1]{\item #1}
+
+\begin{document}
+
+% ------------------------------------------------------------------ header
+{\LARGE\bfseries Ross Jacobucci}\\[3pt]
+Madison, WI \,$\cdot$\, \href{mailto:rcjacobuc@gmail.com}{rcjacobuc@gmail.com} \,$\cdot$\, (701) 318-5783\\[1pt]
+\href{https://www.linkedin.com/in/ross-jacobucci-7018b05b/}{linkedin.com/in/ross-jacobucci-7018b05b} \,$\cdot$\, \href{https://github.com/Rjacobucci}{github.com/Rjacobucci} \,$\cdot$\, rjacobucci.com \,$\cdot$\, \href{https://scholar.google.com/citations?user=K7_cclwAAAAJ}{Google Scholar}
+\vspace{4pt}
+
+\section{Summary}
+Machine learning scientist with ten years leading research programs that turn smartphone, wearable, and text data into risk predictions and adaptive interventions for mental health and suicide prevention. Led \$7.6M in federal awards as PI or MPI and contributed to \$29M more as Co-Investigator. Built and ran an LLM fine-tuning and inference pipeline on a 15-GPU cluster; designed and analyzed randomized experiments including factorial and micro-randomized trials. Author of \textit{Machine Learning for Social and Behavioral Research} (Guilford, 2023), 78 peer-reviewed papers, and R packages with 400K+ downloads.
+
+\section{Skills}
+\textbf{Modeling and inference:} predictive modeling and evaluation (regularized and tree-ensemble models, calibration, leakage and inflated-performance checks); experimentation and causal inference (factorial and micro-randomized trials, causal excursion effects, heterogeneous treatment effects with causal forests, policy learning, cross-cohort transport tests); reinforcement learning and bandits for adaptive interventions; longitudinal, multilevel, and time-series models; SEM and psychometrics; NLP and text mining.\par\vspace{2pt}
+\textbf{LLMs:} LoRA/PEFT fine-tuning of open models including vision-language models (Qwen); vLLM and SGLang inference; Unsloth; automated model-selection harnesses with grouped cross-validation, lockbox test sets, and promotion gates; OCR and vision-language classification at scale (7M+ images).\par\vspace{2pt}
+\textbf{Languages and tools:} Python (PyTorch, Hugging Face Transformers/PEFT, scikit-learn, pandas), R (CRAN package author), SQL, Mplus, Git, Linux/HPC; self-managed GPU servers.\par\vspace{2pt}
+\textbf{Data:} passive smartphone sensing, screenshots, wearables (Empatica, Garmin), ecological momentary assessment, clinical and survey data.
+
+\section{Experience}
+\org{Center for Healthy Minds, University of Wisconsin--Madison}{Madison, WI}
+\role{Research Associate Professor (2026--present); Research Assistant Professor (2024--2026)}{2024--present}
+\begin{itemize}
+\item Principal Investigator of a \$6.6M ARPA-H award (EVIDENT, 2026--2028), leading a team of 20 to measure rapid clinical change in behavioral health from multimodal data: designed the protocol and measurement stack for a 1,500-person randomized trial and a 300-person observational cohort combining Empatica and Garmin wearables, Android and iOS passive sensing, video, and EMA; selected vendors and data platforms; led IRB, legal, and data-security review.
+\item Built the lab's LLM stack: LoRA fine-tuning of open vision-language models (Qwen) with Hugging Face PEFT and Unsloth, vLLM/SGLang inference, and an automated model-selection harness (user-grouped cross-validation, lockbox test set, promotion gates) on a 15-GPU L40S cluster inside a restricted data environment.
+\item Processed 7.4M+ smartphone screenshots with OCR and vision-language classification on an HPC cluster to detect suicide-related language and predict momentary suicidal ideation (\textit{JMIR Mental Health}, 2026).
+\item Led the causal and personalization analysis of a two-cohort factorial trial ($2^4$ and $2^6$ designs, about 760 participants each) with a nested micro-randomized trial (380 participants, 10,000+ person-days): estimated causal excursion effects, tested heterogeneity with causal forests, policy trees, and cross-cohort transport, and delivered deployment rules for message timing and targeting; designed the Phase 2 bandit-driven JITAI and its simulation study.
+\item Showed that passively logged nighttime phone use predicts next-day suicide risk (\textit{JAMA Network Open}, 2025) and linked screenshot-derived screen time to daily suicide risk (\textit{npj Digital Medicine}, 2025).
+\item Co-Investigator on NIH R01, DARPA, and Templeton awards totaling \$29M; supervise a data scientist and research staff; responsible for participant-safety procedures in studies enrolling people at risk for suicide.
+\end{itemize}
+\vspace{3pt}
+\org{Department of Psychology, University of Notre Dame}{Notre Dame, IN}
+\role{Assistant Professor}{2017--2024}
+\begin{itemize}
+\item Founded a lab applying machine learning to suicide and self-injury research; MPI on two NIH R21 awards (\$860K) on real-time suicide risk detection from passively captured smartphone screenshots and on adaptive time sampling for momentary risk assessment.
+\item Developed prediction methods for text and self-report data and published a critique of inflated prediction performance in suicide machine learning (\textit{Clinical Psychological Science}, 2021).
+\item Authored CRAN packages regsem, MplusTrees, and longRPart2 (400K+ combined downloads) for regularized SEM and tree-based analysis of longitudinal data.
+\item Advised three PhD students in quantitative and clinical psychology; taught graduate regression and machine learning courses; co-authored \textit{Machine Learning for Social and Behavioral Research}.
+\end{itemize}
+
+\section{Selected Publications}
+78 peer-reviewed papers; full list at \url{https://scholar.google.com/citations?user=K7_cclwAAAAJ}.
+\begin{itemize}
+\pub{Jacobucci R, Shao W, Kobrinsky V, Ammerman B (2026). Predicting momentary suicidal ideation from smartphone screenshots using vision-language models. \textit{JMIR Mental Health}.}
+\pub{Jacobucci R, Jones SG, Blacutt M, Ammerman BA (2025). Passive vs active nighttime smartphone use as markers of next-day suicide risk. \textit{JAMA Network Open}.}
+\pub{Jacobucci R, Blacutt M, Ram N, Ammerman BA (2025). Smartphone screen time and suicide risk in daily life captured through high-resolution screenshot data. \textit{npj Digital Medicine}.}
+\pub{Ammerman BA, Kleiman EM, O'Brien C, \ldots, Jacobucci R (2025). Smartphone-based text obtained via passive sensing as it relates to direct suicide risk assessment. \textit{Psychological Medicine}.}
+\pub{Jacobucci R, Littlefield A, Millner AJ, Kleiman EM, Steinley D (2021). Evidence of inflated prediction performance: A commentary on machine learning and suicide research. \textit{Clinical Psychological Science}.}
+\pub{Jacobucci R, Grimm KJ, McArdle JJ (2016). Regularized structural equation modeling. \textit{Structural Equation Modeling}.}
+\end{itemize}
+
+\section{Open-Source Software}
+\textbf{regsem} (regularized SEM; 300K+ downloads), \textbf{MplusTrees}, \textbf{longRPart2}, \textbf{dtree}, \textbf{autoSEM} --- R packages on CRAN, authored and maintained since 2016.
+
+\section{Book and Honors}
+\begin{itemize}
+\item Jacobucci R, Grimm KJ, Zhang Z (2023). \textit{Machine Learning for Social and Behavioral Research}. Guilford Press. Barbara Byrne Award for Outstanding Book, Society of Multivariate Experimental Psychology (2025).
+\item Early Career Research Award, Society of Multivariate Experimental Psychology (2023); Rising Star, Association for Psychological Science (2021); Anastasi Dissertation Award, APA Division 5 (2019).
+\item Research featured in \textit{National Geographic} (2025), \textit{APA Monitor} (2023), and \textit{APS Observer} (2022).
+\end{itemize}
+
+\section{Teaching and Professional Activities}
+\begin{itemize}
+\item Instructor, Applied Deep Learning with Python (2024) and Advanced Machine Learning (2021--2024), Statistical Horizons; instructor, APA Advanced Training Institutes (2016--2020).
+\item Editorial boards: \textit{Psychological Methods}, \textit{Clinical Psychological Science}, \textit{Psychological Science}. NIMH grant review panels (2020--2023).
+\item 15 invited talks on AI and suicide prevention, screenshot-based prediction, and regularized SEM, including USC, Stanford, and the Max Planck Institute for Human Development.
+\end{itemize}
+
+\section{Education}
+\textbf{Ph.D., Psychology (Quantitative Methods)}, University of Southern California, 2017. NIH T32 predoctoral fellow.\par
+\textbf{B.A., Psychology}, Luther College, 2010.
+
+\end{document}
