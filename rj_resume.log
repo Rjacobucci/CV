@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.9.25)  22 SEP 2026 08:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.9.25)  22 SEP 2026 09:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -345,14 +345,27 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 34.
 LaTeX Font Info:    Trying to load font information for TS1+bch on input line 5
-0.
+1.
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ts1bch.fd
 File: ts1bch.fd 2004/10/18 font definitions for TS1/bch.
 ) [1
 
 {/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/loc
-al/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc}] [2] (./rj_resume.aux)
+al/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc}]
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 6
+9.
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `cmtt' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+ [2{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc
+}]
+(./rj_resume.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -361,23 +374,24 @@ Package rerunfilecheck Info: File `rj_resume.out' has not changed.
 (rerunfilecheck)             Checksum: 971534ACA7A7B2D66C595674A4AC13B2;985.
  ) 
 Here is how much of TeX's memory you used:
- 10869 strings out of 474116
- 172464 string characters out of 5743682
- 1943187 words of memory out of 5000000
- 33061 multiletter control sequences out of 15000+600000
- 578604 words of font info for 91 fonts, out of 8000000 for 9000
+ 10894 strings out of 474116
+ 173213 string characters out of 5743682
+ 1944187 words of memory out of 5000000
+ 33084 multiletter control sequences out of 15000+600000
+ 578657 words of font info for 90 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,5n,87p,1006b,577s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,5n,87p,1006b,581s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb><
 /usr/local/texlive/2024/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></us
 r/local/texlive/2024/texmf-dist/fonts/type1/bitstrea/charter/bchri8a.pfb></usr/
 local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/lo
 cal/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local
-/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on rj_resume.pdf (2 pages, 83276 bytes).
+/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/
+texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
+Output written on rj_resume.pdf (2 pages, 107488 bytes).
 PDF statistics:
- 83 PDF objects out of 1000 (max. 8388607)
- 66 compressed objects within 1 object stream
+ 94 PDF objects out of 1000 (max. 8388607)
+ 75 compressed objects within 1 object stream
  11 named destinations out of 1000 (max. 500000)
- 22081 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 22593 words of extra memory for PDF output out of 24883 (max. 10000000)
 
